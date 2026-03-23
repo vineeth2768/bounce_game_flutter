@@ -1,0 +1,102 @@
+import 'dart:ui';
+
+import '../utils/constants.dart';
+
+const LevelDefinition level8 = LevelDefinition(
+  number: 8,
+  worldSize: Size(2480, 860),
+  playerStart: Offset(84, 700),
+  platforms: [
+    PlatformSpec(Rect.fromLTWH(0, 800, 2480, 60)),
+    PlatformSpec(Rect.fromLTWH(50, 690, 130, 18)),
+    PlatformSpec(Rect.fromLTWH(250, 650, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(430, 610, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(610, 560, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(800, 510, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(1010, 470, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(1220, 430, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(1430, 390, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(1640, 350, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(1850, 310, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(2060, 270, 110, 18)),
+    PlatformSpec(Rect.fromLTWH(2260, 230, 110, 18)),
+  ],
+  movingPlatforms: [
+    MovingPlatformSpec(
+      start: Offset(370, 740),
+      end: Offset(580, 740),
+      size: Size(105, 18),
+      speed: 110,
+    ),
+    MovingPlatformSpec(
+      start: Offset(920, 640),
+      end: Offset(920, 520),
+      size: Size(105, 18),
+      speed: 95,
+    ),
+    MovingPlatformSpec(
+      start: Offset(1540, 520),
+      end: Offset(1740, 520),
+      size: Size(105, 18),
+      speed: 110,
+    ),
+    MovingPlatformSpec(
+      start: Offset(2120, 410),
+      end: Offset(2300, 410),
+      size: Size(105, 18),
+      speed: 105,
+    ),
+  ],
+  spikes: [
+    SpikeSpec(Rect.fromLTWH(195, 782, 42, 18)),
+    SpikeSpec(Rect.fromLTWH(550, 782, 42, 18)),
+    SpikeSpec(Rect.fromLTWH(935, 782, 42, 18)),
+    SpikeSpec(Rect.fromLTWH(1320, 782, 42, 18)),
+    SpikeSpec(Rect.fromLTWH(1710, 782, 42, 18)),
+    SpikeSpec(Rect.fromLTWH(2100, 782, 42, 18)),
+  ],
+  rings: [
+    RingSpec(Offset(118, 648)),
+    RingSpec(Offset(305, 608)),
+    RingSpec(Offset(485, 568)),
+    RingSpec(Offset(665, 518)),
+    RingSpec(Offset(855, 468)),
+    RingSpec(Offset(1065, 428)),
+    RingSpec(Offset(1275, 388)),
+    RingSpec(Offset(1485, 348)),
+    RingSpec(Offset(1695, 308)),
+    RingSpec(Offset(1905, 268)),
+    RingSpec(Offset(2115, 228)),
+    RingSpec(Offset(2315, 188)),
+  ],
+  checkpoints: [
+    CheckpointSpec(Offset(1240, 798)),
+    CheckpointSpec(Offset(1860, 308)),
+  ],
+  enemies: [
+    EnemySpec(
+      type: EnemyType.patrol,
+      start: Offset(614, 530),
+      end: Offset(690, 530),
+      size: Size(30, 30),
+      speed: 92,
+    ),
+    EnemySpec(
+      type: EnemyType.rolling,
+      start: Offset(1435, 358),
+      end: Offset(1510, 358),
+      size: Size(28, 28),
+      speed: 125,
+    ),
+    EnemySpec(
+      type: EnemyType.patrol,
+      start: Offset(2068, 238),
+      end: Offset(2145, 238),
+      size: Size(30, 30),
+      speed: 96,
+    ),
+  ],
+  exitPosition: Offset(2320, 162),
+  exitSize: Size(48, 70),
+  parTimeSeconds: 65,
+);
